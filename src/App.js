@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Dogs from './Componentes.jsx/Dogs';
+import useSWR from 'swr';
+import { useEffect, useState } from 'react';
+
+  //const { data, error} = useSWR('/api/user', fetcher) 
+//if (error) {
+//  return <div> aild to load </div>
+//}
+//if (!data || !Perros) {
+//  return  <div> loading... </div>
+//}
+//if (!Perros){
+//  return <div> loading...</div>
+//}
+//return <div> Dogs {Perros}</div>
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InformacionDogs></InformacionDogs>
     </div>
   );
 }
